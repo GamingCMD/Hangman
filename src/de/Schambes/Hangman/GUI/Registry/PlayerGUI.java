@@ -10,12 +10,12 @@ package de.Schambes.Hangman.GUI.Registry;
  * @author Schambes
  */
 @SuppressWarnings("serial")
-public class Player extends javax.swing.JPanel {
+public class PlayerGUI extends javax.swing.JPanel {
 
     /**
      * Creates new form Player
      */
-    public Player(de.Schambes.Hangman.GUI.Registry.PlayerRegistry registry, int playerID) {
+    public PlayerGUI(de.Schambes.Hangman.GUI.Registry.PlayerRegistryGUI registry, int playerID) {
         this.registry = registry;
         this.playerNum = playerID;
         initComponents();
@@ -170,7 +170,7 @@ public class Player extends javax.swing.JPanel {
     
     @SuppressWarnings("unused")
 	private de.Schambes.Hangman.Player player;
-    private final de.Schambes.Hangman.GUI.Registry.PlayerRegistry registry;
+    private final de.Schambes.Hangman.GUI.Registry.PlayerRegistryGUI registry;
     private int playerNum;
     // End of variables declaration//GEN-END:variables
     

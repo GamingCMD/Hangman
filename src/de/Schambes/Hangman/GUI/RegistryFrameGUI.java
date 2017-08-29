@@ -10,12 +10,14 @@ package de.Schambes.Hangman.GUI;
  * @author Schambes
  */
 @SuppressWarnings("serial")
-public class RegistryFrame extends javax.swing.JFrame {
+public class RegistryFrameGUI extends javax.swing.JFrame {
+	
+	private RegistryGUI content;
 
     /**
      * Creates new form Registry
      */
-    public RegistryFrame() {
+    public RegistryFrameGUI() {
         initComponents();
     }
 
@@ -60,13 +62,13 @@ public class RegistryFrame extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(RegistryFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistryFrameGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(RegistryFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistryFrameGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(RegistryFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistryFrameGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(RegistryFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(RegistryFrameGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -74,7 +76,7 @@ public class RegistryFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new RegistryFrame().setVisible(true);
+                new RegistryFrameGUI().setVisible(true);
             }
         });
     }

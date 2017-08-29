@@ -12,12 +12,12 @@ import java.util.ArrayList;
  * @author Schambes
  */
 @SuppressWarnings("serial")
-public class PlayerRegistry extends javax.swing.JPanel {
+public class PlayerRegistryGUI extends javax.swing.JPanel {
 
     /**
      * Creates new form PlayerRegistry
      */
-    public PlayerRegistry(de.Schambes.Hangman.Game game) {
+    public PlayerRegistryGUI(de.Schambes.Hangman.Game game) {
         initComponents();
         this.game = game;
     }
@@ -34,8 +34,8 @@ public class PlayerRegistry extends javax.swing.JPanel {
         addBtn = new javax.swing.JButton();
         playerScrollPane = new javax.swing.JScrollPane();
         playerPanel = new javax.swing.JPanel();
-        playerList = new ArrayList<de.Schambes.Hangman.GUI.Registry.Player>();
-        playerList.add(new de.Schambes.Hangman.GUI.Registry.Player(this, playerList.size()));
+        playerList = new ArrayList<de.Schambes.Hangman.GUI.Registry.PlayerGUI>();
+        playerList.add(new de.Schambes.Hangman.GUI.Registry.PlayerGUI(this, playerList.size()));
         confirmPnl = new javax.swing.JPanel();
         continueBtn = new javax.swing.JButton();
         cancelBtn = new javax.swing.JButton();
@@ -69,7 +69,7 @@ public class PlayerRegistry extends javax.swing.JPanel {
         playerScrollPane.setMinimumSize(new java.awt.Dimension(280, 68));
 
         playerPanel.setLayout(new javax.swing.BoxLayout(playerPanel, javax.swing.BoxLayout.Y_AXIS));
-        for(Player p : playerList) {
+        for(PlayerGUI p : playerList) {
         	playerPanel.add(p);
         }
         
@@ -139,7 +139,7 @@ public class PlayerRegistry extends javax.swing.JPanel {
     }//GEN-LAST:event_continueBtnActionPerformed
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
-        playerList.add(new de.Schambes.Hangman.GUI.Registry.Player(this, playerList.size()));
+        playerList.add(new de.Schambes.Hangman.GUI.Registry.PlayerGUI(this, playerList.size()));
     }//GEN-LAST:event_addBtnActionPerformed
     
     public void deletePlayer(int playerID) {
@@ -165,7 +165,7 @@ public class PlayerRegistry extends javax.swing.JPanel {
     private javax.swing.JPanel confirmPnl;
     private javax.swing.JButton continueBtn;
     private javax.swing.JPanel ctrlPanel;
-    private ArrayList<de.Schambes.Hangman.GUI.Registry.Player> playerList;
+    private ArrayList<de.Schambes.Hangman.GUI.Registry.PlayerGUI> playerList;
     private javax.swing.JPanel playerPanel;
     private javax.swing.JScrollPane playerScrollPane;
     @SuppressWarnings("unused")
