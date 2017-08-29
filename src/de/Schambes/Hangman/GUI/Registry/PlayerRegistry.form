@@ -95,15 +95,15 @@
             <Property name="axis" type="int" value="1"/>
           </Layout>
           <SubComponents>
-            <Component class="de.Schambes.Hangman.GUI.Player" name="player1">
+            <Component class="de.Schambes.Hangman.GUI.Registry.Player" name="player1">
             </Component>
-            <Component class="de.Schambes.Hangman.GUI.Player" name="player2">
+            <Component class="de.Schambes.Hangman.GUI.Registry.Player" name="player2">
             </Component>
-            <Component class="de.Schambes.Hangman.GUI.Player" name="player3">
+            <Component class="de.Schambes.Hangman.GUI.Registry.Player" name="player3">
             </Component>
-            <Component class="de.Schambes.Hangman.GUI.Player" name="player5">
+            <Component class="de.Schambes.Hangman.GUI.Registry.Player" name="player5">
             </Component>
-            <Component class="de.Schambes.Hangman.GUI.Player" name="player4">
+            <Component class="de.Schambes.Hangman.GUI.Registry.Player" name="player4">
             </Component>
           </SubComponents>
         </Container>

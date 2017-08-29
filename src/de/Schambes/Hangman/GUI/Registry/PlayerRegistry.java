@@ -7,8 +7,6 @@ package de.Schambes.Hangman.GUI.Registry;
 
 import java.util.ArrayList;
 
-import de.Schambes.Hangman.GUI.Player;
-
 /**
  *
  * @author Schambes
@@ -36,8 +34,8 @@ public class PlayerRegistry extends javax.swing.JPanel {
         addBtn = new javax.swing.JButton();
         playerScrollPane = new javax.swing.JScrollPane();
         playerPanel = new javax.swing.JPanel();
-        playerList = new ArrayList<de.Schambes.Hangman.GUI.Player>();
-        playerList.add(new de.Schambes.Hangman.GUI.Player(this, playerList.size()));
+        playerList = new ArrayList<de.Schambes.Hangman.GUI.Registry.Player>();
+        playerList.add(new de.Schambes.Hangman.GUI.Registry.Player(this, playerList.size()));
         confirmPnl = new javax.swing.JPanel();
         continueBtn = new javax.swing.JButton();
         cancelBtn = new javax.swing.JButton();
@@ -141,7 +139,7 @@ public class PlayerRegistry extends javax.swing.JPanel {
     }//GEN-LAST:event_continueBtnActionPerformed
 
     private void addBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtnActionPerformed
-        playerList.add(new de.Schambes.Hangman.GUI.Player(this, playerList.size()));
+        playerList.add(new de.Schambes.Hangman.GUI.Registry.Player(this, playerList.size()));
     }//GEN-LAST:event_addBtnActionPerformed
     
     public void deletePlayer(int playerID) {
@@ -167,7 +165,7 @@ public class PlayerRegistry extends javax.swing.JPanel {
     private javax.swing.JPanel confirmPnl;
     private javax.swing.JButton continueBtn;
     private javax.swing.JPanel ctrlPanel;
-    private ArrayList<de.Schambes.Hangman.GUI.Player> playerList;
+    private ArrayList<de.Schambes.Hangman.GUI.Registry.Player> playerList;
     private javax.swing.JPanel playerPanel;
     private javax.swing.JScrollPane playerScrollPane;
     @SuppressWarnings("unused")
