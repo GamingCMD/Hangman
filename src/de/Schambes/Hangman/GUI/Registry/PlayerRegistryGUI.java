@@ -6,20 +6,22 @@
 package de.Schambes.Hangman.GUI.Registry;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
+import de.Schambes.Hangman.GUI.RegistryGUI;
 
 /**
  *
  * @author Schambes
  */
 @SuppressWarnings("serial")
-public class PlayerRegistryGUI extends javax.swing.JPanel {
+public class PlayerRegistryGUI extends RegistryGUI {
 
     /**
      * Creates new form PlayerRegistry
      */
-    public PlayerRegistryGUI(de.Schambes.Hangman.Game game) {
+    public PlayerRegistryGUI() {
         initComponents();
-        this.game = game;
     }
 
     /**
@@ -151,12 +153,20 @@ public class PlayerRegistryGUI extends javax.swing.JPanel {
     
     //is called from Player object
     public void up(int playerID) {
-    	
+    	if((playerID + 1) < playerList.size()) {
+    		playerList.get(playerID).setID(playerID - 1);
+    		playerList.get(playerID - 1).setID(playerID);
+    		Collections.sort(playerList);
+    	}
     }
     
     //is called from Player object
     public void down(int playerID) {
-    	//TODO move the specified Player object and resort all the other players
+    	if((playerID) > 0) {
+    		playerList.get(playerID).setID(playerID + 1);
+    		playerList.get(playerID + 1).setID(playerID);
+    		Collections.sort(playerList);
+    	}
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -168,7 +178,5 @@ public class PlayerRegistryGUI extends javax.swing.JPanel {
     private ArrayList<de.Schambes.Hangman.GUI.Registry.PlayerGUI> playerList;
     private javax.swing.JPanel playerPanel;
     private javax.swing.JScrollPane playerScrollPane;
-    @SuppressWarnings("unused")
-	private de.Schambes.Hangman.Game game;
     // End of variables declaration//GEN-END:variables
 }

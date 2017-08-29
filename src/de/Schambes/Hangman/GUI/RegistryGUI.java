@@ -1,5 +1,6 @@
 package de.Schambes.Hangman.GUI;
 
-public abstract class RegistryGUI {
+@SuppressWarnings("serial")
+public abstract class RegistryGUI extends javax.swing.JPanel{
 
 }

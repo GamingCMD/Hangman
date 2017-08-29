@@ -5,6 +5,8 @@
  */
 package de.Schambes.Hangman.GUI;
 
+import de.Schambes.Hangman.GUI.Registry.PlayerRegistryGUI;
+
 /**
  *
  * @author Schambes
@@ -13,11 +15,12 @@ package de.Schambes.Hangman.GUI;
 public class RegistryFrameGUI extends javax.swing.JFrame {
 	
 	private RegistryGUI content;
-
+	
     /**
      * Creates new form Registry
      */
     public RegistryFrameGUI() {
+    	this.content = new PlayerRegistryGUI();
         initComponents();
     }
 

@@ -10,14 +10,14 @@ package de.Schambes.Hangman.GUI.Registry;
  * @author Schambes
  */
 @SuppressWarnings("serial")
-public class PlayerGUI extends javax.swing.JPanel {
+public class PlayerGUI extends javax.swing.JPanel implements Comparable<PlayerGUI>{
 
     /**
      * Creates new form Player
      */
     public PlayerGUI(de.Schambes.Hangman.GUI.Registry.PlayerRegistryGUI registry, int playerID) {
         this.registry = registry;
-        this.playerNum = playerID;
+        this.playerID = playerID;
         initComponents();
         
     }
@@ -60,7 +60,7 @@ public class PlayerGUI extends javax.swing.JPanel {
         });
         navigatePnl.add(downBtn);
 
-        numLabel.setText("" + (this.playerNum + 1));
+        numLabel.setText("" + (this.playerID + 1));
 
         NameField.setText("Enter Name");
         NameField.addActionListener(new java.awt.event.ActionListener() {
@@ -146,15 +146,15 @@ public class PlayerGUI extends javax.swing.JPanel {
     }//GEN-LAST:event_NameFieldActionPerformed
 
     private void deleteBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBtnActionPerformed
-        this.registry.deletePlayer(this.playerNum);
+        this.registry.deletePlayer(this.playerID);
     }//GEN-LAST:event_deleteBtnActionPerformed
     
     private void upBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_upBtnActionPerformed
-    	this.registry.up(this.playerNum);
+    	this.registry.up(this.playerID);
     }//GEN-LAST:event_upBtnActionPerformed
     
     private void downBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_downBtnActionPerformed
-    	this.registry.down(this.playerNum);
+    	this.registry.down(this.playerID);
     }//GEN-LAST:event_downBtnActionPerformed
     
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -171,19 +171,24 @@ public class PlayerGUI extends javax.swing.JPanel {
     @SuppressWarnings("unused")
 	private de.Schambes.Hangman.Player player;
     private final de.Schambes.Hangman.GUI.Registry.PlayerRegistryGUI registry;
-    private int playerNum;
+    private int playerID;
     // End of variables declaration//GEN-END:variables
     
     public int getID() {
-    	return this.playerNum;
+    	return this.playerID;
     }
     
     public void setID(int ID) {
-    	this.playerNum = ID;
+    	this.playerID = ID;
     }
     
     public de.Schambes.Hangman.Player getPlayer() {
-    	return this.player = new de.Schambes.Hangman.Player(this.NameField.getText(), this.playerNum);
+    	return this.player = new de.Schambes.Hangman.Player(this.NameField.getText(), this.playerID);
     }
+
+	@Override
+	public int compareTo(PlayerGUI o) {
+		return new Integer(this.playerID).compareTo(new Integer(o.getID()));
+	}
     
 }
