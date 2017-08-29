@@ -14,7 +14,7 @@ public class Utils {
 	
 	private Utils() {
 		// TODO Auto-generated constructor stub
-	}
+		}
 	
 	private void update() throws IOException {
 		//Serverconnection
